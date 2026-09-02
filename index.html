@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Para mi amor ❤️</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(180deg, #ffe8ee, #fff5f7, #ffe9ef);
+            color: #4b292f;
+            overflow-x: hidden;
+        }
+
+        /* =========================
+           CORAZONES FLOTANTES
+        ========================= */
+
+        .corazones {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .corazon {
+            position: absolute;
+            bottom: -50px;
+            font-size: 20px;
+            opacity: 0.6;
+            animation: flotar 8s linear infinite;
+        }
+
+        .corazon:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .corazon:nth-child(2) {
+            left: 30%;
+            animation-delay: 2s;
+        }
+
+        .corazon:nth-child(3) {
+            left: 55%;
+            animation-delay: 4s;
+        }
+
+        .corazon:nth-child(4) {
+            left: 75%;
+            animation-delay: 1s;
+        }
+
+        .corazon:nth-child(5) {
+            left: 90%;
+            animation-delay: 5s;
+        }
+
+        @keyframes flotar {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(25deg);
+                opacity: 0;
+            }
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            position: relative;
+            z-index: 5;
+            width: 92%;
+            max-width: 1200px;
+            margin: 20px auto 0;
+            padding: 18px 25px;
+
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(12px);
+
+            border-radius: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: 0 8px 30px rgba(180, 80, 100, 0.12);
+        }
+
+        .logo {
+            font-family: 'Dancing Script', cursive;
+            font-size: 25px;
+            font-weight: 700;
+            color: #e94e73;
+        }
+
+        .menu {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #4b292f;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            color: #ed5477;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            position: relative;
+            z-index: 1;
+
+            max-width: 1200px;
+            margin: auto;
+            min-height: 600px;
+
+            padding: 80px 6%;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(50px, 6vw, 85px);
+            line-height: 0.95;
+            color: #43262b;
+        }
+
+        .hero-text h1 span {
+            color: #ee5579;
+        }
+
+        .hero-text p {
+            margin-top: 30px;
+            line-height: 1.9;
+            font-size: 16px;
+            max-width: 500px;
+        }
+
+        .firma {
+            margin-top: 25px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 30px;
+            color: #ed5277;
+        }
+
+        /* FOTO PRINCIPAL */
+
+        .foto-principal {
+            position: relative;
+            transform: rotate(2deg);
+            background: white;
+            padding: 15px 15px 45px;
+            border-radius: 5px;
+
+            box-shadow: 0 15px 40px rgba(100, 40, 50, 0.2);
+        }
+
+        .foto-principal img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .foto-caption {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            text-align: center;
+
+            font-family: 'Dancing Script', cursive;
+            font-size: 22px;
+        }
+
+        /* =========================
+           SECCIONES
+        ========================= */
+
+        .seccion {
+            position: relative;
+            z-index: 1;
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 50px 6%;
+        }
+
+        .titulo {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .titulo h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 45px;
+            color: #df4569;
+        }
+
+        .titulo p {
+            margin-top: 5px;
+            color: #76545b;
+        }
+
+        /* =========================
+           CONTADOR
+        ========================= */
+
+        .contador-box {
+            background: rgba(255,255,255,0.75);
+            backdrop-filter: blur(10px);
+
+            border: 1px solid rgba(238, 100, 130, 0.2);
+            border-radius: 30px;
+
+            padding: 40px 25px;
+
+            box-shadow: 0 15px 40px rgba(180, 70, 100, 0.12);
+        }
+
+        .fecha-inicio {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #76545b;
+        }
+
+        .fecha-inicio strong {
+            color: #e54c70;
+        }
+
+        .contador {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .tiempo {
+            background: #fff0f4;
+            border-radius: 20px;
+            padding: 25px 10px;
+            text-align: center;
+            border: 1px solid #ffd2dc;
+        }
+
+        .numero {
+            font-size: clamp(30px, 5vw, 50px);
+            font-weight: 700;
+            color: #e64d70;
+        }
+
+        .etiqueta {
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #79535b;
+            margin-top: 5px;
+        }
+
+        .mensaje-contador {
+            text-align: center;
+            margin-top: 25px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 25px;
+            color: #e64d70;
+        }
+
+        /* =========================
+           RAZONES
+        ========================= */
+
+        .razones {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .razon {
+            background: rgba(255,255,255,0.7);
+            border-radius: 25px;
+            padding: 30px 18px;
+            text-align: center;
+            border: 1px solid #ffd3dd;
+            transition: 0.3s;
+        }
+
+        .razon:hover {
+            transform: translateY(-7px);
+        }
+
+        .icono {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .razon h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #d94768;
+        }
+
+        .razon p {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #76545b;
+        }
+
+        /* =========================
+           GALERÍA
+        ========================= */
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .foto-card {
+            background: white;
+            padding: 10px 10px 18px;
+            box-shadow: 0 8px 25px rgba(100,40,50,0.12);
+            transform: rotate(-1deg);
+            transition: 0.3s;
+        }
+
+        .foto-card:nth-child(even) {
+            transform: rotate(1.5deg);
+        }
+
+        .foto-card:hover {
+            transform: rotate(0) translateY(-5px);
+        }
+
+        .foto-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .foto-card p {
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        /* =========================
+           CARTA
+        ========================= */
+
+        .carta {
+            background: rgba(255,255,255,0.75);
+            border-radius: 30px;
+            padding: 50px 10%;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(180,70,100,0.1);
+        }
+
+        .sobre {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .carta h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 45px;
+            color: #df4569;
+            margin-bottom: 25px;
+        }
+
+        .carta p {
+            line-height: 2;
+            font-size: 15px;
+            color: #65464d;
+        }
+
+        .carta .grande {
+            margin-top: 30px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 35px;
+            color: #ed4f74;
+        }
+
+        /* =========================
+           FINAL
+        ========================= */
+
+        .final {
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .final h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(45px, 7vw, 70px);
+            color: #df4569;
+        }
+
+        .final p {
+            margin-top: 15px;
+            color: #76545b;
+        }
+
+        .corazon-final {
+            font-size: 50px;
+            margin-top: 20px;
+            animation: latido 1.2s infinite;
+        }
+
+        @keyframes latido {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: rgba(255, 180, 195, 0.35);
+            font-size: 12px;
+            color: #79535b;
+        }
+
+        /* =========================
+           BOTÓN ARRIBA
+        ========================= */
+
+        .arriba {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+
+            width: 45px;
+            height: 45px;
+
+            border: none;
+            border-radius: 50%;
+
+            background: #ed5277;
+            color: white;
+            font-size: 20px;
+
+            cursor: pointer;
+            z-index: 10;
+
+            box-shadow: 0 5px 20px rgba(200,60,90,0.3);
+        }
+
+        /* =========================
+           RESPONSIVE CELULAR
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            nav {
+                width: 94%;
+                padding: 15px 18px;
+            }
+
+            .logo {
+                font-size: 21px;
+            }
+
+            .menu {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 60px 7%;
+                gap: 40px;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .foto-principal img {
+                height: 300px;
+            }
+
+            .contador {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .razones {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .galeria {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .foto-card img {
+                height: 150px;
+            }
+
+            .carta {
+                padding: 40px 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .hero {
+                padding-top: 40px;
+            }
+
+            .hero-text h1 {
+                font-size: 55px;
+            }
+
+            .seccion {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+            .titulo h2 {
+                font-size: 38px;
+            }
+
+            .razones {
+                grid-template-columns: 1fr;
+            }
+
+            .galeria {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .foto-card img {
+                height: 130px;
+            }
+
+            .foto-card p {
+                font-size: 17px;
+            }
+
+            .contador-box {
+                padding: 30px 15px;
+            }
+
+            .tiempo {
+                padding: 20px 5px;
+            }
+
+            .numero {
+                font-size: 32px;
+            }
+
+            .etiqueta {
+                font-size: 10px;
+                letter-spacing: 1px;
+            }
+        }
+    
+    /* =========================
+   COPITO SECRETO ❄️
+========================= */
+
+.copito-secreto {
+    position: fixed;
+    right: 12px;
+    top: 48%;
+    
+    border: none;
+    background: transparent;
+    
+    font-size: 15px;
+    opacity: 0.55;
+    
+    cursor: pointer;
+    z-index: 20;
+    
+    transition: 0.3s;
+}
+
+.copito-secreto:hover {
+    opacity: 0.8;
+    transform: scale(1.2);
+}
+
+
+/* VENTANA DEL MENSAJE */
+
+.mensaje-secreto {
+    position: fixed;
+    inset: 0;
+    
+    background: rgba(60, 30, 40, 0.35);
+    backdrop-filter: blur(5px);
+    
+    display: none;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 20px;
+    z-index: 100;
+}
+
+.mensaje-secreto.mostrar {
+    display: flex;
+}
+
+
+/* TARJETA */
+
+.mensaje-contenido {
+    position: relative;
+    
+    width: 100%;
+    max-width: 420px;
+    
+    background: #fff7f9;
+    border-radius: 30px;
+    
+    padding: 40px 30px;
+    
+    text-align: center;
+    
+    box-shadow: 0 20px 60px rgba(100, 30, 50, 0.25);
+    
+    animation: aparecerMensaje 0.4s ease;
+}
+
+@keyframes aparecerMensaje {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.copito-grande {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.mensaje-contenido h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 38px;
+    color: #df4569;
+    margin-bottom: 20px;
+}
+
+.mensaje-contenido p {
+    color: #65464d;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.mensaje-contenido .especial {
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    color: #e64d70;
+    margin-top: 20px;
+}
+
+
+/* BOTÓN CERRAR */
+
+.cerrar-mensaje {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    
+    border: none;
+    background: transparent;
+    
+    font-size: 28px;
+    color: #9b6a73;
+    
+    cursor: pointer;
+}
+    
+    </style>
+</head>
+
+<body>
+    
+    
+    <!-- COPITO SECRETO ❄️ -->
+<button class="copito-secreto" onclick="mostrarMensaje()">
+    ❄️
+</button>
+
+<div class="mensaje-secreto" id="mensajeSecreto">
+    <div class="mensaje-contenido">
+        <button class="cerrar-mensaje" onclick="cerrarMensaje()">×</button>
+
+        <div class="copito-grande">❄️</div>
+
+        <img src="img/cumple.jpg" class="imagen-secreta" alt="Una sorpresa para ti">
+        
+        <h2>Además, amor... 💗</h2>
+
+        <p>
+            Mañana es el gran día...
+        </p>
+
+        <p>
+            Un añito más mi amorcita preciosa,
+            y espero poder hacerte sentir muy especial
+            en este día
+        </p>
+
+        <p class="especial">
+            Feliz próximo cumpleaños, mi amor(este es un llegalito pa ti mi amor)
+        </p>
+    </div>
+</div>
+
+    <!-- CORAZONES -->
+    <div class="corazones">
+        <div class="corazon">❤️</div>
+        <div class="corazon">💕</div>
+        <div class="corazon">💗</div>
+        <div class="corazon">💖</div>
+        <div class="corazon">❤️</div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">❤️ Para mi noviesita bella
+            mi alesita pechocha
+        </div>
+
+        <ul class="menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#tiempo">Nuestro tiempo</a></li>
+            <li><a href="#momentos">Momentos</a></li>
+            <li><a href="#carta">Carta</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+
+        <div class="hero-text">
+
+            <h1>
+                Feliz 1 semana
+                <br>
+                <span>mi amor ❤️</span>
+            </h1>
+
+            <p>
+                Puede que apenas haya pasado una semana,
+                pero en este poquito tiempo hemos creado
+                momentos que quiero guardar siempre.
+                Gracias por formar parte de mi vida y por
+                hacer estos días tan especiales.
+            </p>
+
+            <div class="firma">
+                Con mucho cariño para ti 💗
+            </div>
+
+        </div>
+
+        <div class="foto-principal">
+
+            <!-- CAMBIA esta imagen por una foto de ustedes -->
+            <img src="sombra.jpg" alt="Nuestro momento">
+
+            <div class="foto-caption">
+                Tú y yo, llenandonos cada vez mas de mejores momentos ❤️
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTADOR -->
+    <section class="seccion" id="tiempo">
+
+        <div class="titulo">
+            <h2>⏱️ Nuestro tiempo juntos</h2>
+
+            <p>
+                Desde el 26 de agosto de 2026 a las 8:20 p. m.
+            </p>
+        </div>
+
+        <div class="contador-box">
+
+            <div class="fecha-inicio">
+                ❤️ Cada segundo desde nuestro comienzo cuenta
+            </div>
+
+            <div class="contador">
+
+                <div class="tiempo">
+                    <div class="numero" id="dias">0</div>
+                    <div class="etiqueta">DÍAS</div>
+                </div>
+
+                <div class="tiempo">
+                    <div class="numero" id="horas">0</div>
+                    <div class="etiqueta">HORAS</div>
+                </div>
+
+                <div class="tiempo">
+                    <div class="numero" id="minutos">0</div>
+                    <div class="etiqueta">MINUTOS</div>
+                </div>
+
+                <div class="tiempo">
+                    <div class="numero" id="segundos">0</div>
+                    <div class="etiqueta">SEGUNDOS</div>
+                </div>
+
+            </div>
+
+            <div class="mensaje-contador">
+                "Cada segundo contigo cuenta." ❤️
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- RAZONES -->
+    <section class="seccion">
+
+        <div class="titulo">
+            <h2>¿Por qué eres especial? 💕</h2>
+            <p>Algunas de las muchas cosas que hacen especial nuestra historia.</p>
+        </div>
+
+        <div class="razones">
+
+            <div class="razon">
+                <div class="icono">❤️</div>
+                <h3>Me haces feliz</h3>
+                <p>
+                    Tu forma de ser y esos pequeños detalles
+                    hacen que mis días sean mejores.
+                </p>
+            </div>
+
+            <div class="razon">
+                <div class="icono">🌷</div>
+                <h3>Tu forma de ser</h3>
+                <p>
+                    Me encanta tu personalidad y cada una
+                    de esas pequeñas cosas que te hacen tú.
+                </p>
+            </div>
+
+            <div class="razon">
+                <div class="icono">⭐</div>
+                <h3>Los momentos</h3>
+                <p>
+                    Cada momento que compartimos se convierte
+                    en un recuerdo que quiero conservar.
+                </p>
+            </div>
+
+            <div class="razon">
+                <div class="icono">🥰</div>
+                <h3>Tú</h3>
+                <p>
+                    Simplemente gracias por ser esa persona
+                    tan especial en mi vida.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- MOMENTOS -->
+    <section class="seccion" id="momentos">
+
+        <div class="titulo">
+            <h2>Nuestros momentos 📸</h2>
+            <p>Pequeños recuerdos de nuestra historia juntos.</p>
+        </div>
+
+        <div class="galeria">
+
+            <div class="foto-card">
+                <img src="primer.png" alt="Momento 1">
+                <p>una de nuestras primeras imagenes ❤️</p>
+            </div>
+
+            <div class="foto-card">
+                <img src="playa.jpg" alt="Momento 2">
+                <p>Un recuerdo bonito </p>
+            </div>
+
+            <div class="foto-card">
+                <img src="parque.jpg" alt="Momento 3">
+                <p>Una sonrisa para guardar </p>
+            </div>
+
+            <div class="foto-card">
+                <img src="tuyyo.jpg" alt="Momento 4">
+                <p>Tú y yo solo los 2</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CARTA -->
+    <section class="seccion" id="carta">
+
+        <div class="carta">
+
+            <div class="sobre">💌</div>
+
+            <h2>Una pequeña carta para ti</h2>
+
+            <p>
+                Mi amor, hoy cumplimos nuestra primera semana de pareja
+                y quería hacer algo especial para recordar este día.
+            </p>
+
+            <br>
+
+            <p>
+                Sé que una semana puede parecer poquito tiempo,
+                pero para mí cada momento que ha contado el nosotros
+                tiene un significado enorme.
+            </p>
+
+            <br>
+
+            <p>
+                Gracias por cada conversación, cada risa,
+                cada detalle y cada momento que hemos vivido.
+                Espero que esta sea solamente la primera página
+                de una historia llena de mejores recuerdos bonitos.
+            </p>
+
+            <div class="grande">
+                Feliz primera semana, mi amor ❤️
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FINAL -->
+    <section class="final">
+
+        <h2>lo nuestro recién comienza mi vida 💗</h2>
+
+        <p>
+            Por muchas más semanas, meses y momentos juntos.
+        </p>
+
+        <div class="corazon-final">
+            ❤️
+        </div>
+
+    </section>
+
+    <footer>
+        Hecho con mucho cariño de tu goldito osito 🐻❤️
+    </footer>
+
+    <!-- BOTÓN ARRIBA -->
+    <button class="arriba" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+        ↑
+    </button>
+
+
+    <script>
+    
+    /* =========================
+   MENSAJE SECRETO ❄️
+========================= */
+
+function mostrarMensaje() {
+    document
+        .getElementById("mensajeSecreto")
+        .classList.add("mostrar");
+}
+
+function cerrarMensaje() {
+    document
+        .getElementById("mensajeSecreto")
+        .classList.remove("mostrar");
+}
+
+
+/* También permite cerrar tocando fuera de la tarjeta */
+
+document
+    .getElementById("mensajeSecreto")
+    .addEventListener("click", function(e) {
+
+        if (e.target === this) {
+            cerrarMensaje();
+        }
+
+    });
+
+        /* ==========================================
+           CONTADOR PROGRESIVO
+           
+           Inicio:
+           26 de agosto de 2026
+           8:20 PM
+        ========================================== */
+
+        const fechaInicio = new Date("2026-08-26T20:20:00");
+
+        function actualizarContador() {
+
+            const ahora = new Date();
+
+            let diferencia = ahora - fechaInicio;
+
+            // Si la fecha actual es anterior al inicio
+            if (diferencia < 0) {
+                diferencia = 0;
+            }
+
+            const segundo = 1000;
+            const minuto = segundo * 60;
+            const hora = minuto * 60;
+            const dia = hora * 24;
+
+            const dias = Math.floor(diferencia / dia);
+
+            const horas = Math.floor(
+                (diferencia % dia) / hora
+            );
+
+            const minutos = Math.floor(
+                (diferencia % hora) / minuto
+            );
+
+            const segundos = Math.floor(
+                (diferencia % minuto) / segundo
+            );
+
+            document.getElementById("dias").textContent = dias;
+
+            document.getElementById("horas").textContent =
+                String(horas).padStart(2, "0");
+
+            document.getElementById("minutos").textContent =
+                String(minutos).padStart(2, "0");
+
+            document.getElementById("segundos").textContent =
+                String(segundos).padStart(2, "0");
+        }
+
+        actualizarContador();
+
+        // Actualiza cada segundo
+        setInterval(actualizarContador, 1000);
+
+
+        /* ==========================================
+           CORAZONES EXTRA
+        ========================================== */
+
+        function crearCorazon() {
+
+            const corazones = document.querySelector(".corazones");
+
+            const corazon = document.createElement("div");
+
+            corazon.classList.add("corazon");
+
+            const emojis = ["❤️", "💕", "💗", "💖", "💓"];
+
+            corazon.innerHTML =
+                emojis[Math.floor(Math.random() * emojis.length)];
+
+            corazon.style.left =
+                Math.random() * 100 + "%";
+
+            corazon.style.fontSize =
+                (12 + Math.random() * 18) + "px";
+
+            corazon.style.animationDuration =
+                (6 + Math.random() * 5) + "s";
+
+            corazones.appendChild(corazon);
+
+            setTimeout(() => {
+                corazon.remove();
+            }, 11000);
+        }
+
+        setInterval(crearCorazon, 1800);
+
+    </script>
+
+</body>
+</html>
